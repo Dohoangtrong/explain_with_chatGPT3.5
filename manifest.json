@@ -1,0 +1,31 @@
+
+{
+    "name": "More Information",
+    "version": "1.0.1",
+    "manifest_version": 3,
+    "background":{
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches":["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_icon": "Avatar_flower.png"
+    },
+    "icons": {
+        "48": "Avatar_flower.png",
+        "128": "Avatar_flower.png"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+B",
+                "mac": "Command+B"
+            }
+        }
+    },
+    "permissions": ["contextMenus", "activeTab"]
+}

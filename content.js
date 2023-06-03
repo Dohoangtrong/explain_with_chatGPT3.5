@@ -2,7 +2,8 @@
 chrome.runtime.onMessage.addListener(function(request,sender,sendResponse){
     var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", "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");
+    // api phải trả phí Bearer $OPENAI_API_KEY
+myHeaders.append("Authorization", "Bearer $OPENAI_API_KEY");
 
 var raw = JSON.stringify({
   "model": "gpt-3.5-turbo",
